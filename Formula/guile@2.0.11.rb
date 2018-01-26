@@ -6,7 +6,7 @@ class GuileAT2011 < Formula
   stable do
     url "https://ftp.gnu.org/gnu/guile/guile-2.0.11.tar.xz"
     mirror "https://ftpmirror.gnu.org/guile/guile-2.0.11.tar.xz"
-    sha256 "e8442566256e1be14e51fc18839cd799b966bc5b16c6a1d7a7c35155a8619d82"
+    sha256 "aed0a4a6db4e310cbdfeb3613fa6f86fddc91ef624c1e3f8937a6304c69103e2"
 
     if MacOS.version >= :sierra
       # https://debbugs.gnu.org/cgi/bugreport.cgi?bug=23870
