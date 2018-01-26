@@ -8,7 +8,7 @@
   sha256 "b0f46ed29acd13be542a4988d7f0604b10869d6b4c41916c539dc99711fb5458"
 
   depends_on "gcc"
-  depends_on "guile@2.0"
+  depends_on "guile@2.0.11"
 
   def install
       system "./configure", "--disable-debug",
