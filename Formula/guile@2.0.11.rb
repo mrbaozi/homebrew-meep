@@ -1,4 +1,4 @@
-class GuileAT20 < Formula
+class GuileAT2011 < Formula
   desc "GNU Ubiquitous Intelligent Language for Extensions"
   homepage "https://www.gnu.org/software/guile/"
   revision 1
