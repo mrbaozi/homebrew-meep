@@ -4,6 +4,7 @@
  class Meep < Formula
   desc "free finite-difference time-domain (FDTD) software for electromagnetic simulations"
   homepage "https://meep.readthedocs.io/en/latest/"
+  head "https://github.com/stevengj/meep.git", :revision => f33efca4b8f0cd373f641babd9b8250d725c0455
   url "https://github.com/stevengj/meep/releases/download/v1.4.1/meep-1.4.1.tar.gz"
   sha256 "492456349c59e923919fcefed16bb1fab358d23eeae77c720cdaf13130a83672"
 
@@ -23,6 +24,7 @@
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--enable-shared",
+                          "--with-mpi",
                           "PYTHON=python3",
                           "--prefix=#{prefix}"
     system "make", "install" # if this fails, try separate make/make install steps
