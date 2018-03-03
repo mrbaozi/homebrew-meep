@@ -29,7 +29,7 @@
                              "PYTHON=python3",
                              "--prefix=#{prefix}"
     end
-    if build.stable?:
+    if build.stable?
       system "./configure", "--disable-debug",
                             "--disable-dependency-tracking",
                             "--disable-silent-rules",
