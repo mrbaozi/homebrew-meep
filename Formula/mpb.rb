@@ -13,6 +13,7 @@
   depends_on "libctl"
   depends_on "hdf5"
   depends_on "fftw"
+  depends_on "open-mpi"
 
   def install
       system "./configure", "--disable-debug",
