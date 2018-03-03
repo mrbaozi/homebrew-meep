@@ -20,13 +20,24 @@
   depends_on "h5utils"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--enable-shared",
-                          "--with-mpi",
-                          "PYTHON=python3",
-                          "--prefix=#{prefix}"
+    head do:
+      system "./autogen.sh", "--enable-shared",
+                             "--with-mpi",
+                             "--disable-debug",
+                             "--disable-dependency-tracking",
+                             "--disable-silent-rules",
+                             "PYTHON=python3",
+                             "--prefix=#{prefix}"
+    end
+    stable do:
+      system "./configure", "--disable-debug",
+                            "--disable-dependency-tracking",
+                            "--disable-silent-rules",
+                            "--enable-shared",
+                            "--with-mpi",
+                            "PYTHON=python3",
+                            "--prefix=#{prefix}"
+    end
     system "make", "install" # if this fails, try separate make/make install steps
   end
 end
