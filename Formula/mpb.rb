@@ -9,7 +9,7 @@
 
   depends_on "openblas"
   depends_on "lapack"
-  depends_on "guile@2.0.11"
+  depends_on "guile"
   depends_on "libctl"
   depends_on "hdf5"
   depends_on "fftw"

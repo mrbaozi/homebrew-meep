@@ -14,7 +14,7 @@
   depends_on "hdf5"
   depends_on "lapack"
   depends_on "openblas"
-  depends_on "guile@2.0.11"
+  depends_on "guile"
   depends_on "open-mpi"
   depends_on "h5utils"
 
