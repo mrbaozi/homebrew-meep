@@ -5,7 +5,7 @@
   desc "free finite-difference time-domain (FDTD) software for electromagnetic simulations"
   homepage "https://meep.readthedocs.io/en/latest/"
   head "https://github.com/stevengj/meep.git", :revision => "f33efca4b8f0cd373f641babd9b8250d725c0455"
-  url "https://github.com/stevengj/meep/releases/download/v1.4.1/meep-1.4.1.tar.gz"
+  url "https://github.com/stevengj/meep/releases/download/v1.4.3/meep-1.4.3.tar.gz"
   sha256 "492456349c59e923919fcefed16bb1fab358d23eeae77c720cdaf13130a83672"
 
   depends_on "gcc"
@@ -20,7 +20,7 @@
   depends_on "h5utils"
 
   def install
-    head do:
+    if build.head?
       system "./autogen.sh", "--enable-shared",
                              "--with-mpi",
                              "--disable-debug",
@@ -29,7 +29,7 @@
                              "PYTHON=python3",
                              "--prefix=#{prefix}"
     end
-    stable do:
+    if build.stable?:
       system "./configure", "--disable-debug",
                             "--disable-dependency-tracking",
                             "--disable-silent-rules",
