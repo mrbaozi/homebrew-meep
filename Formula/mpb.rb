@@ -22,5 +22,13 @@
           "LIBS=-ldl",
           "--prefix=#{prefix}"
       system "make", "install" # if this fails, try separate make/make install steps
+      system "./configure", "--disable-debug",
+          "--disable-dependency-tracking",
+          "--disable-silent-rules",
+          "--enable-shared",
+          "--with-mpi",
+          "LIBS=-ldl",
+          "--prefix=#{prefix}"
+      system "make", "install" # if this fails, try separate make/make install steps
   end
 end
