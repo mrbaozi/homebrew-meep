@@ -7,7 +7,6 @@
   url "https://github.com/stevengj/meep/releases/download/v1.4.3/meep-1.4.3.tar.gz"
   sha256 "1105b369c3f7f4aae0de62e933e49f4e3c94b8031a7eb39e2ee315d4cea46b02"
 
-  depends_on "gcc"
   depends_on "libctl"
   depends_on "mpb"
   depends_on "harminv"
