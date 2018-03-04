@@ -5,7 +5,7 @@
   desc "free finite-difference time-domain (FDTD) software for electromagnetic simulations"
   homepage "https://meep.readthedocs.io/en/latest/"
   url "https://github.com/stevengj/meep/releases/download/v1.4.3/meep-1.4.3.tar.gz"
-  sha256 "492456349c59e923919fcefed16bb1fab358d23eeae77c720cdaf13130a83672"
+  sha256 "1105b369c3f7f4aae0de62e933e49f4e3c94b8031a7eb39e2ee315d4cea46b02"
 
   depends_on "gcc"
   depends_on "libctl"
